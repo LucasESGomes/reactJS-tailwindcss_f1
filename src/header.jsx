@@ -5,7 +5,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-      <header className="text z-10 flex justify-between items-center text-white px-8 md:px-32 drop-shadow-md top-0 left-0 w-full h-20">
+      <header className="text z-10 flex bg-black justify-between items-center text-white px-8 md:px-32 drop-shadow-md top-0 left-0 w-full h-20">
         <a href="#">
           <img
             src={logo}

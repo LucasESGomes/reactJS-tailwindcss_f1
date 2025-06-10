@@ -5,6 +5,7 @@ import amr22 from "./assets/amr22.webp"
 import amr21 from "./assets/amr21.jpg"
 import safetyCar from "./assets/safety-car.jpg"
 import fernandoAlonso from "./assets/fernandoAlonso.png"
+import lanceStroll from "./assets/lanceStroll.png"
 
 
 
@@ -64,28 +65,24 @@ function Main() {
     <div className="w-full h-full bg-gray-900 text-white">
       {/* Seção Hero com gradiente */}
       <section
-        className="relative h-screen flex items-center justify-center bg-cover bg-center"
+        className="relative brightness-95 h-screen flex items-center justify-center bg-cover bg-center"
         style={{
           backgroundImage: `url(${background})`,
         }}
       >
         <div className="absolute inset-0 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-black/80 before:to-transparent before:-z-10"></div>
 
-        <div className="z-10 text-center px-4">
-          <a
-            href="#pilotos"
-            className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 relative top-40 rounded-full text-lg font-semibold transition-all "
-          >
-            CONHEÇA NOSSOS PILOTOS
-          </a>
+        <div className="z-10 px-4"> 
+          <i className="bxr bx-arrow-down-stroke text-9xl pt-150"></i>
+
         </div>
       </section>
 
       {/* Seção Carros - Carrossel */}
-      <section className="py-20 bg-[#007F3D] relative overflow-hidden">
+      <section className="py-20 bg-[#1ab163] relative overflow-hidden">
         <div className="container mx-auto px-8 md:px-32">
           <div className="flex justify-between items-center mb-12">
-            <h2 className="text-3xl font-bold text-white">NOSSOS CARROS</h2>
+            <h2 className="text-3xl font-bold text-white">FORMULA 1 - CARS </h2>
             <div className="flex gap-4">
               <button
                 onClick={prevCar}
@@ -114,7 +111,7 @@ function Main() {
                     : "opacity-0 pointer-events-none"
                 }`}
               >
-                <div className="flex-1 h-full bg-gray-800/30 rounded-lg flex items-center justify-center p-8">
+                <div className="flex-1 h-full bg-gray-800/30 rounded-lg flex items-center justify-center">
                 <img 
                   src={car.image} // Agora usando a imagem importada diretamente
                   alt={`Aston Martin ${car.name} ${car.year}`}
@@ -131,7 +128,7 @@ function Main() {
                     {car.description}
                   </p>
                   <p className="text-sm mb-6 text-white/80">{car.specs}</p>
-                  <button className="mt-4 bg-black text-white px-6 py-3 rounded-md hover:bg-gray-900 transition-all">
+                  <button className="mt-4 bg-black text-white px-6 py-3 rounded-md hover:bg-gray-90 hover:bg-gray-200 hover:text-black transition-all">
                     ESPECIFICAÇÕES TÉCNICAS
                   </button>
                 </div>
@@ -157,13 +154,13 @@ function Main() {
       {/* Seção Pilotos */}
       <section id="pilotos" className="py-20 px-8 md:px-32 max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center text-green-400">
-          NOSSOS PILOTOS
+          ELENCO ATUAL - 2025 SEASON
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Piloto 1 */}
-          <div className="flex flex-col md:flex-row gap-6 items-center bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all">
-            <div className="w-32 h-32 rounded-full bg-gray-700 flex items-center justify-center">
+          <div className="flex flex-col md:flex-row gap-6 items-center bg-gray-700 p-6 rounded-lg hover:bg-gray-800 transition-all">
+            <div className="w-35 h-40 rounded-full bg-gray-700 flex items-center justify-center">
               <img src={fernandoAlonso} alt="Fernando Alonso"/>
             </div>
             <div>
@@ -184,9 +181,9 @@ function Main() {
           </div>
 
           {/* Piloto 2 */}
-          <div className="flex flex-col md:flex-row gap-6 items-center bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all">
-            <div className="w-32 h-32 rounded-full bg-gray-700 flex items-center justify-center">
-              [FOTO LANCE STROLL]
+          <div className="flex flex-col md:flex-row gap-6 items-center bg-gray-700 p-6 rounded-lg hover:bg-gray-800 transition-all">
+            <div className="w-35 h-40 rounded-full bg-gray-700 flex items-center justify-center">
+              <img src={lanceStroll} alt="" />
             </div>
             <div>
               <h3 className="text-2xl font-bold mb-2">Lance Stroll</h3>
