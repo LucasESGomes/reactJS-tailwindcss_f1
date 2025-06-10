@@ -1,5 +1,11 @@
 import { useState } from "react";
 import background from "./assets/f1-car-walpaper.jpg";
+import amr23 from "./assets/amr23-2023.jpg";
+import amr22 from "./assets/amr22.webp"
+import amr21 from "./assets/amr21.jpg"
+import safetyCar from "./assets/safety-car.jpg"
+import fernandoAlonso from "./assets/fernandoAlonso.png"
+
 
 
 function Main() {
@@ -9,7 +15,7 @@ function Main() {
       id: 1,
       name: "AMR23",
       year: "2023",
-      image: "./assets/amr23-2023.jpg",
+      image: amr23,
       description:
         "O mais recente challenger da Aston Martin para o campeonato",
       specs: "Motor Mercedes-AMG F1 M14, Aerodinâmica revolucionária",
@@ -18,7 +24,7 @@ function Main() {
       id: 2,
       name: "AMR22",
       year: "2022",
-      image: "amr22-2022.jpg",
+      image: amr22,
       description: "Segunda temporada completa da equipe",
       specs: "Motor Mercedes-AMG F1 M13, Evolução do conceito de aerodinâmica",
     },
@@ -26,7 +32,7 @@ function Main() {
       id: 3,
       name: "AMR21",
       year: "2021",
-      image: "amr21-2021.jpg",
+      image: amr21,
       description: "O retorno triunfal da Aston Martin à F1",
       specs: "Motor Mercedes-AMG F1 M12, Primeiro carro da nova era",
     },
@@ -34,7 +40,7 @@ function Main() {
       id: 4,
       name: "Vantage F1 Edition",
       year: "2021",
-      image: "vantage-f1-2021.jpg",
+      image: safetyCar,
       description: "Carro de segurança oficial inspirado na F1",
       specs: "Motor V8 biturbo 4.0L, 535 cv de potência",
     },
@@ -109,11 +115,11 @@ function Main() {
                 }`}
               >
                 <div className="flex-1 h-full bg-gray-800/30 rounded-lg flex items-center justify-center p-8">
-                  <img
-                    src={`Carro${carModels.image}`}
-                    alt={`Aston Martin ${car.name} ${car.year}`}
-                    className="max-h-full max-w-full object-contain"
-                  />
+                <img 
+                  src={car.image} // Agora usando a imagem importada diretamente
+                  alt={`Aston Martin ${car.name} ${car.year}`}
+                  className="max-h-full max-w-full object-contain"
+                />
                 </div>
 
                 <div className="flex-1">
@@ -158,7 +164,7 @@ function Main() {
           {/* Piloto 1 */}
           <div className="flex flex-col md:flex-row gap-6 items-center bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all">
             <div className="w-32 h-32 rounded-full bg-gray-700 flex items-center justify-center">
-              [FOTO FERNANDO ALONSO]
+              <img src={fernandoAlonso} alt="Fernando Alonso"/>
             </div>
             <div>
               <h3 className="text-2xl font-bold mb-2">Fernando Alonso</h3>
